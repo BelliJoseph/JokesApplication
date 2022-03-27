@@ -3,6 +3,7 @@ package com.example.jokeapplication.di
 import com.example.jokeapplication.rest.JokeRepository
 import com.example.jokeapplication.rest.JokeAPI
 import com.example.jokeapplication.rest.JokesRepositoryImpl
+import com.example.jokeapplication.viewmodel.JokesViewModel
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -49,5 +50,7 @@ class NetworkModule {
     @Provides
     fun providesJokeRepository(jokeAPI: JokeAPI): JokeRepository =
         JokesRepositoryImpl(jokeAPI)
+
+
 
 }

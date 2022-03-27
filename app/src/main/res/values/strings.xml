@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">JokeApplication</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcomeMessage">Welcome to the Chuck Norris Joke Application</string>
+    <string name="listOfJokes">List of\n Jokes</string>
+    <string name="changeName">Change name\n used in Joke</string>
+    <string name="randomJoke">Random\n Joke</string>
+    <string name="chooseSelection">Click on one of the buttons to get Chuck Norris jokes the way you want</string>
+    <string name="titleListOfJokes">List of Chuck Norris Jokes</string>
+    <string name="goBackToMenu">Go Back To Menu</string>
+    <string name="defaultMessage">This is a Default Message</string>
+    <string name="titleRandomJoke">Random Chuck Norris Jokes</string>
+    <string name="checkBoxLabel">Check the box to get only clean jokes</string>
+    <string name="clickButtonForRandomJoke">Click Button for a Random Joke</string>
+    <string name="randomJokeButton">Random Joke</string>
+    <string name="nameChangeTitle">Change Name Used to Replace Chuck Norris</string>
+    <string name="nameChangeEditLabel">Enter the First and Last name you would like\n to replace Chuck Norris</string>
+    <string name="nameChangeEditHint">Enter First and Last Name separated by a space</string>
+    <string name="nameChangeShowJokeButton">Show me a random Joke</string>
+    <string name="nameChangeErrorMessage">Please Enter a Name and Try Again!</string>
+    <string name="nameChangeImageText">Chuck Norris may get mad....\nBut we won\'t tell</string>
 </resources>
