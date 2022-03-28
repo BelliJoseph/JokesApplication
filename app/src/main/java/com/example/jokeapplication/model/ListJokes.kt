@@ -1,11 +1,10 @@
 package com.example.jokeapplication.model
 
-
 import com.google.gson.annotations.SerializedName
 
-data class Jokes(
+data class ListJokes(
     @SerializedName("type")
     val type: String,
     @SerializedName("value")
-    val jokes: Joke
+    val jokes: List<Joke>
 )

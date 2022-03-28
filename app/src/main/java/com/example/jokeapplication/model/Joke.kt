@@ -9,5 +9,5 @@ data class Joke(
     @SerializedName("id")
     val id: Int,
     @SerializedName("joke")
-    val joke: String
+    val theJoke: String
 )
