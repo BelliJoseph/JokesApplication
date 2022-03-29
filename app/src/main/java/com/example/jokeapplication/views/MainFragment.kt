@@ -1,7 +1,7 @@
 package com.example.jokeapplication.views
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,9 +19,10 @@ class MainFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding.jokeListButton.setOnClickListener {
+            Log.d("MainFragment", "Click JokeListButton")
             findNavController().navigate(R.id.action_mainFragment_to_jokeListFragment)
         }
 

@@ -8,13 +8,13 @@
     tools:context=".views.JokeListFragment">
 
     <TextView
-        android:id="@+id/jokeListRecyclerView"
+        android:id="@+id/jokeListTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/titleListOfJokes"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,18 +22,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/jokeListRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:padding="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/jokeListButton"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/listProgressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jokeListRecyclerView" />
+        app:layout_constraintTop_toBottomOf="@+id/jokeListTitle" />
+
+    <ProgressBar
+        android:id="@+id/listProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/jokeListBackButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/jokeListButton"
+        android:id="@+id/jokeListBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/goBackToMenu"

@@ -9,12 +9,12 @@ interface JokeRepository {
 
     suspend fun getNumberOfRandomJokes(
         number: Int = JokeAPI.NUMBER_OF_JOKES
-    ): Response<List<ListJokes>>
+    ): Response<ListJokes>
 
     suspend fun getExcludedNumberRandomJokes(
         number: Int = JokeAPI.NUMBER_OF_JOKES,
         exclude: String = JokeAPI.EXCLUDE_EXPLICIT
-    ): Response<List<ListJokes>>
+    ): Response<ListJokes>
 
     suspend fun getExcludedRandomJoke(
         exclude: String = JokeAPI.EXCLUDE_EXPLICIT
@@ -34,14 +34,14 @@ class JokesRepositoryImpl(
         return jokeAPI.getRandomJoke()
     }
 
-    override suspend fun getNumberOfRandomJokes(number: Int): Response<List<ListJokes>> {
+    override suspend fun getNumberOfRandomJokes(number: Int): Response<ListJokes> {
         return jokeAPI.getNumberOfRandomJokes(number = number)
     }
 
     override suspend fun getExcludedNumberRandomJokes(
         number: Int,
         exclude: String
-    ): Response<List<ListJokes>> {
+    ): Response<ListJokes> {
         return jokeAPI.getExcludedNumberRandomJokes(number = number, exclude = exclude)
     }
 

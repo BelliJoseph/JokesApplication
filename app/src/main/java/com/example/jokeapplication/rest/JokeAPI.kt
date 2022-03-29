@@ -19,14 +19,14 @@ interface JokeAPI {
     suspend fun getNumberOfRandomJokes(
         @Path("number") number : Int = NUMBER_OF_JOKES,
         @Query("escape") escape: String = ESCAPE
-    ) : Response<List<ListJokes>>
+    ) : Response<ListJokes>
 
     @GET(RANDOM_NUMBER)
     suspend fun getExcludedNumberRandomJokes(
         @Path("number") number : Int = NUMBER_OF_JOKES,
         @Query("exclude") exclude : String = EXCLUDE_EXPLICIT,
         @Query("escape") escape: String = ESCAPE
-    ) : Response<List<ListJokes>>
+    ) : Response<ListJokes>
 
     @GET(RANDOM)
     suspend fun getExcludedRandomJoke(
@@ -44,11 +44,11 @@ interface JokeAPI {
     companion object{
         const val BASE_URL = "https://api.icndb.com/jokes/"
         private const val RANDOM = "random"
-        private const val RANDOM_NUMBER = "random/"
+        private const val RANDOM_NUMBER = "random/{number}"
         private const val ESCAPE = "javascript"
 
         const val EXCLUDE_EXPLICIT = "explicit"
-        const val NUMBER_OF_JOKES = 10
+        const val NUMBER_OF_JOKES = 20
 
 
         //http://api.icndb.com/jokes/random?exclude=[nerdy]

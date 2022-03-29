@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jokeapplication.R
 import com.example.jokeapplication.model.Joke
-import com.example.jokeapplication.model.ListJokes
 
 class JokeAdapter(
     private val jokeList: MutableList<Joke> = mutableListOf()
@@ -22,7 +21,7 @@ class JokeAdapter(
     fun addJokesToList(listOfJokes: List<Joke>){
         val currentListSize = jokeList.size
         jokeList.addAll(listOfJokes)
-        notifyItemRangeInserted(currentListSize -1, jokeList.size)
+        notifyItemRangeInserted(currentListSize -1, listOfJokes.size)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JokeViewHolder {

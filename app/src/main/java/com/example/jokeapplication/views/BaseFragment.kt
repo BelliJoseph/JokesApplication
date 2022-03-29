@@ -12,12 +12,12 @@ import javax.inject.Inject
 
 open class BaseFragment : Fragment() {
 
-//    @Inject
-//    lateinit var jokeRepository: JokeRepository
-//
-//    private val viewModel by lazy{
-//        ViewModelProvider(this, ViewModelFactory(jokeRepository)) [JokesViewModel::class.java]
-//    }
+    @Inject
+    lateinit var jokeRepository: JokeRepository
+
+    protected val viewModel by lazy{
+        ViewModelProvider(this, ViewModelFactory(jokeRepository)) [JokesViewModel::class.java]
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +26,8 @@ open class BaseFragment : Fragment() {
     }
 
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelFactory
-
-    protected val viewModel by viewModels<JokesViewModel> { viewModelFactory }
+//    @Inject
+//    lateinit var viewModelFactory: ViewModelFactory
+//
+//    protected val viewModel by viewModels<JokesViewModel> { viewModelFactory }
 }
