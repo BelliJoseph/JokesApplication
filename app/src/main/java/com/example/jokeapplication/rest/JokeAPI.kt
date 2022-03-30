@@ -50,7 +50,7 @@ interface JokeAPI {
         const val EXCLUDE_EXPLICIT = "explicit"
         const val NUMBER_OF_JOKES = 20
 
-
+        //API end points
         //http://api.icndb.com/jokes/random?exclude=[nerdy]
         //http://api.icndb.com/jokes/random?exclude=[nerdy,explicit]
         //http://api.icndb.com/jokes/random

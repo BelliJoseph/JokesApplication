@@ -37,7 +37,6 @@ class JokeAdapter(
 
     override fun getItemCount(): Int = jokeList.size
 
-
 }
 
 class JokeViewHolder(

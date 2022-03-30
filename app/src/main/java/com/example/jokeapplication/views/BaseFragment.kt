@@ -2,7 +2,6 @@ package com.example.jokeapplication.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.jokeapplication.JokesApp
 import com.example.jokeapplication.rest.JokeRepository
@@ -16,7 +15,7 @@ open class BaseFragment : Fragment() {
     lateinit var jokeRepository: JokeRepository
 
     protected val viewModel by lazy{
-        ViewModelProvider(this, ViewModelFactory(jokeRepository)) [JokesViewModel::class.java]
+        ViewModelProvider(requireActivity(), ViewModelFactory(jokeRepository)) [JokesViewModel::class.java]
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +24,4 @@ open class BaseFragment : Fragment() {
         JokesApp.jokesComponent.inject(this)
     }
 
-
-//    @Inject
-//    lateinit var viewModelFactory: ViewModelFactory
-//
-//    protected val viewModel by viewModels<JokesViewModel> { viewModelFactory }
 }

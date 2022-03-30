@@ -2,13 +2,11 @@ package com.example.jokeapplication.views
 
 import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.jokeapplication.R
 import com.example.jokeapplication.databinding.FragmentNameChangeBinding
 import com.example.jokeapplication.model.Jokes
 import com.example.jokeapplication.utils.JokeState
@@ -23,7 +21,7 @@ class NameChangeFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
 
         binding.nameChangeJokeButton.setOnClickListener {

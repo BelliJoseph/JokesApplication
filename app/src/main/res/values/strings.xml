@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">JokeApplication</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcomeMessage">Welcome to the Chuck Norris Joke Application</string>
     <string name="listOfJokes">List of\n Jokes</string>
     <string name="changeName">Change name\n used in Joke</string>

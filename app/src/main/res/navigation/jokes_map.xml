@@ -26,9 +26,6 @@
         tools:layout="@layout/fragment_random_joke"
         android:name="com.example.jokeapplication.views.RandomJokeFragment">
 
-        <action
-            android:id="@+id/action_randomJokeFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
     </fragment>
 
     <fragment
@@ -36,9 +33,6 @@
         tools:layout="@layout/fragment_name_change"
         android:name="com.example.jokeapplication.views.NameChangeFragment">
 
-        <action
-            android:id="@+id/action_nameChangeFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
     </fragment>
 
     <fragment
@@ -46,9 +40,6 @@
         tools:layout="@layout/fragment_joke_list"
         android:name="com.example.jokeapplication.views.JokeListFragment">
 
-        <action
-            android:id="@+id/action_jokeListFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
     </fragment>
 
 </navigation>

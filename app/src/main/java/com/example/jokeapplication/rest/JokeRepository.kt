@@ -56,5 +56,4 @@ class JokesRepositoryImpl(
         return jokeAPI.getRandomJokeWithName(firstName = firstName, lastName = lastName)
     }
 
-
 }

@@ -3,7 +3,6 @@ package com.example.jokeapplication.di
 import com.example.jokeapplication.rest.JokeRepository
 import com.example.jokeapplication.rest.JokeAPI
 import com.example.jokeapplication.rest.JokesRepositoryImpl
-import com.example.jokeapplication.viewmodel.JokesViewModel
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -11,7 +10,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.util.concurrent.TimeUnit
 
 @Module
@@ -50,7 +48,5 @@ class NetworkModule {
     @Provides
     fun providesJokeRepository(jokeAPI: JokeAPI): JokeRepository =
         JokesRepositoryImpl(jokeAPI)
-
-
 
 }
