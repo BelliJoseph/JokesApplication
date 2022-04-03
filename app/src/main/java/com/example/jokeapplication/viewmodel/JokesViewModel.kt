@@ -26,9 +26,9 @@ class JokesViewModel @Inject constructor(
         _jokes.postValue(JokeState.DEFAULT)
     }
 
-
     fun getRandomJoke(){
         _jokes.postValue(JokeState.LOADING)
+
         viewModelScope.launch(ioDispatcher){
             try{
                 val response = jokeRepository.getRandomJoke()

@@ -26,9 +26,9 @@ class RandomJokeFragment : BaseFragment() {
 
         val check = binding.randomJokeCheckBox
 
-        check.setOnClickListener(View.OnClickListener {
+        check.setOnClickListener {
             checked = check.isChecked
-        })
+        }
 
         viewModel.jokes.observe(viewLifecycleOwner){ state ->
             when(state){
